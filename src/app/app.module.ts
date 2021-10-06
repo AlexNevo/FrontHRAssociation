@@ -7,6 +7,7 @@ import { BarComponent } from './shared/components/bar/bar.component';
 import { EmployeeModule } from './features/employees/employee.module';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component'
 import {AppRoutingModule} from "./app-routing/app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {AppRoutingModule} from "./app-routing/app-routing.module";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgbModule,
     EmployeeModule,
     AppRoutingModule
