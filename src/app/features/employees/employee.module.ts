@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListEmployeesComponent } from "./list-employees/list-employees.component";
 import {EmployeeRoutingModule} from "./employee-routing.module";
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 
 @NgModule({
   declarations: [
-    ListEmployeesComponent
+    ListEmployeesComponent,
+    DeleteEmployeeComponent
   ],
   imports: [
     CommonModule,
