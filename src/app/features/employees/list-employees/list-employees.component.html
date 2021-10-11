@@ -1,13 +1,13 @@
 <div class="row">
 <H2>Liste des employés</H2>
 
-
+<div *ngIf = "employees">
 <table class="table">
   <thead>
   <tr>
     <th scope="col">#</th>
-    <th scope="col">First Name</th>
-    <th scope="col">Last Name</th>
+    <th scope="col">Prénom</th>
+    <th scope="col">Nom</th>
     <th scope="col">email</th>
     <th scope="col"></th>
     <th scope="col"></th>
@@ -19,15 +19,15 @@
       <td>{{ employee.firstName }}</td>
       <td>{{ employee.lastName }}</td>
       <td>{{ employee.email }}</td>
-      <td><button type="button" class="btn btn-primary">modifier</button></td>
-      <td><button type="button" class="btn btn-danger">supprimer</button></td>
+      <td><app-update-employee></app-update-employee></td>
+      <td><app-delete-employee (removeFromTable)="removeFromList($event)"  [employeeToDelete]="employee"></app-delete-employee></td>
     </tr>
   </tbody>
 </table>
-
+</div>
+</div>
 <div class = "row">
   <div class = "col">
     <button type="button" class="btn btn-success">Ajouter un employé</button>
   </div>
-</div>
 </div>

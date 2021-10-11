@@ -15,5 +15,17 @@ export class EmployeeService{
   getEmployees() : Observable<Employee[]>{
     return this._httpClient.get<Employee[]>(environment.apis.employees.url);
   }
+  deleteEmployee(id: string) : Observable<unknown>{
+    return this._httpClient.delete(environment.apis.employees.url+"/"+id)
+  }
 
+  findEmployeeById(employee: Employee, employees: Employee[]):number{
+    return employees.indexOf(employee)
+  }
+
+  updateEmployee(id: string, updatedEmployee : Employee) : Observable<Employee>{
+    return this._httpClient.put<Employee>(environment.apis.employees.url+"/"+id, updatedEmployee)
+  }
 }
+
+
