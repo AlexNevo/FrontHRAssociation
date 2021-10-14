@@ -5,7 +5,7 @@ import {EmployeeRoutingModule} from "./employee-routing.module";
 import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     EmployeeRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     ListEmployeesComponent,

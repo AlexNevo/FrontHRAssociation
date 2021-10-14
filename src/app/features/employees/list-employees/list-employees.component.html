@@ -19,7 +19,7 @@
       <td>{{ employee.firstName }}</td>
       <td>{{ employee.lastName }}</td>
       <td>{{ employee.email }}</td>
-      <td><app-update-employee></app-update-employee></td>
+      <td><app-update-employee [employeeToUpdate] = employee></app-update-employee></td>
       <td><app-delete-employee (removeFromTable)="removeFromList($event)"  [employeeToDelete]="employee"></app-delete-employee></td>
     </tr>
   </tbody>

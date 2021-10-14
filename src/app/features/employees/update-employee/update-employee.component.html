@@ -6,23 +6,23 @@
     </button>
   </div>
   <div class="modal-body">
-   <form>
+   <form [formGroup]="updateForm">
      <label for="firstname">Prénom</label>
      <div class="input-group">
-       <input id="firstname" class="form-control">
+       <input id="firstname" class="form-control" formControlName="firstName">
      </div>
      <label for="lastname">Nom</label>
      <div class="input-group">
-       <input id="lastname" class="form-control">
+       <input id="lastname" class="form-control" formControlName="lastName">
      </div>
      <label for="email">email</label>
      <div class="input-group">
-       <input id="email" class="form-control">
+       <input id="email" class="form-control" formControlName="email">
      </div>
    </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark">Valider</button>
+    <button type="submit" class="btn btn-outline-dark" (click)="onValidate()" [disabled]="!updateForm.valid">Valider</button>
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('close click')">Fermer</button>
   </div>
 </ng-template>
