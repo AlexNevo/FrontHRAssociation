@@ -19,7 +19,9 @@ export class ListEmployeesComponent implements OnInit {
     this._employeeService.getEmployees().subscribe( table => this.employees = table);
   }
   removeFromList(employee : Employee) : void {
-    let idToDelete:number = this._employeeService.findEmployeeById(employee, this.employees);
-    this.employees.splice(idToDelete, 1);
+    this.employees.splice(this._employeeService.findEmployeeById(employee, this.employees), 1);
+  }
+  addToList(employee : Employee) : void {
+    this.employees.push(employee);
   }
 }

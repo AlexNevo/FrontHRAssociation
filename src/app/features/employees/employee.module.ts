@@ -6,12 +6,14 @@ import { DeleteEmployeeComponent } from './delete-employee/delete-employee.compo
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
     ListEmployeesComponent,
     DeleteEmployeeComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    AddEmployeeComponent
   ],
   imports: [
     CommonModule,

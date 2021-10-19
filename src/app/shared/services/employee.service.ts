@@ -26,6 +26,11 @@ export class EmployeeService{
   updateEmployee(id: string, updatedEmployee : Employee) : Observable<Employee>{
     return this._httpClient.put<Employee>(environment.apis.employees.url+"/"+id, updatedEmployee)
   }
+
+  addEmployee(employeeToAdd : Employee) : Observable<Employee>{
+    return this._httpClient.post<Employee>(environment.apis.employees.url, employeeToAdd)
+  }
+
 }
 
 

@@ -9,6 +9,7 @@
     <th scope="col">Prénom</th>
     <th scope="col">Nom</th>
     <th scope="col">email</th>
+    <th scope="col">Fonction</th>
     <th scope="col"></th>
     <th scope="col"></th>
   </tr>
@@ -19,6 +20,7 @@
       <td>{{ employee.firstName }}</td>
       <td>{{ employee.lastName }}</td>
       <td>{{ employee.email }}</td>
+      <td>{{ employee.fonction }}</td>
       <td><app-update-employee [employeeToUpdate] = employee></app-update-employee></td>
       <td><app-delete-employee (removeFromTable)="removeFromList($event)"  [employeeToDelete]="employee"></app-delete-employee></td>
     </tr>
@@ -26,8 +28,4 @@
 </table>
 </div>
 </div>
-<div class = "row">
-  <div class = "col">
-    <button type="button" class="btn btn-success">Ajouter un employé</button>
-  </div>
-</div>
+<app-add-employee (addToTable)="addToList($event)"></app-add-employee>
